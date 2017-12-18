@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DionIS.DAL.Domen.JedinicaMjere>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Oznaka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Broj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mirko)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Oznaka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Broj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mirko)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JedinicaMjereId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JedinicaMjereId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JedinicaMjereId })
+        </td>
+    </tr>
+}
+
+</table>
