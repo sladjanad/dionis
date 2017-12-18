@@ -80,4 +80,5 @@ bower_components
 pkg
 pkgobj
 
+/Web.config
 /.vs/*
